@@ -105,7 +105,6 @@ void inserirElemento()
 void buscarElemento()
 {	
 	int numero = 0;
-	int auxiliar = 0;
 	int aparicao = 0;
 	int i = 0;
 
