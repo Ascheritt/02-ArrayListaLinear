@@ -78,7 +78,7 @@ void exibirElementos()
 {
 	if (nElementos == 0)
 	{
-		cout << " A lista esta vazia \n";
+		cout << "A lista esta vazia!\n";
 	}
 	else {
 		cout << "Elementos: \n";
@@ -105,6 +105,36 @@ void inserirElemento()
 void buscarElemento()
 {	
 	int numero = 0;
+	int auxiliar = 0;
+	int aparicao = 0;
+	int i = 0;
+
+	if (nElementos == 0) {
+		cout << "A lista esta vazia!\n";
+	}
+	else {
+		cout << "Digite o elemento: \n";
+		cin >> numero;
+
+		while (i < nElementos) {
+			if (numero == lista[i]) {
+				if (aparicao == 0) {
+					aparicao++;
+					cout << "O elemento pode ser encontrado na posicao:\n";
+					cout << i + 1 << "\n";
+				}
+				else {
+					cout << i + 1 << "\n";
+				}
+			}
+			else if (aparicao == 0 && i == nElementos - 1) {
+				cout << "Elemento nao encontrado\n";
+			}
+			i++;
+		}
+	}
+
+	/*int numero = 0;
 	int n = 0;
 	int i = 0;
 	int x = 0;
@@ -129,5 +159,5 @@ void buscarElemento()
 			}
 		}
 		n++;
-	}
+	}*/
 }
